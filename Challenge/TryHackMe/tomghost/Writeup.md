@@ -2,7 +2,7 @@
 <h2>Reconnaissance</h2>
 <p>On débute le challenge par un scan Nmap</p>
 <code>nmap -sC -sV -p- -Pn <TARGET_IP></code>
-<img src="writeup_files/nmap.png>
+<img src="https://github/H4shVulca1n/Challenges/TryHackMe/tomghost/writeup_files/nmap.png>
 <p>Nous identifions les services suivants :</p>
 <ul>
 	<li>OpenSSH (22)</li>
@@ -14,4 +14,4 @@
 <h2>Exploitation</h2>
 <p>Grâce à l'exploit déniché plus tôt, nous allons pouvoir lir certaines ressources normalement innaccessible par le commun des mortels...notamment un fichier de configuration XML du service Ajp13</p>
 <code>python3 ajpShooter.py http://<TARGET_IP>:<HTTP_PORT> <AJP_PORT> /WEB-INF/web.xml read</code>
-<img src="writeup_files/ajpShooter.png>
+<img src="https://github/H4shVulca1n/Challenges/TryHackMe/tomghost/writeup_files/ajpShooter.png>
